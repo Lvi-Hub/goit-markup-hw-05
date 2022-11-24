@@ -86,11 +86,16 @@ body {
 .link {
   text-decoration: none;
   list-style: none;
+
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
 .link:focus {
   color: var(--accent-color);
+  transform: color;
 }
 
 .list {
@@ -113,8 +118,6 @@ body {
 .link-logo {
   display: flex;
   align-items: center;
-  /* width: 145px;
-  height: 31px; */
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -134,7 +137,7 @@ body {
 }
 .link-logo:hover,
 .link-logo:focus {
-  color: var(--general-black);
+  color: var(--accent-color);
 }
 
 .header-nav {
@@ -179,9 +182,10 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--secondary-text-color);
-}
-.header-contact-text {
   fill: var(--secondary-text-color);
+  transition-property: fill, color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-text .contact-mail:hover,
@@ -190,6 +194,7 @@ body {
 .header-contact-text .contact-tel:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
+  transform: fill, color;
 }
 .contact-mail,
 .contact-tel {
@@ -386,17 +391,26 @@ body {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition-property: background-color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-soc-icon {
   fill: var(--svg-gray);
+  transition-property: fill, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .team-soc-link:hover,
 .team-soc-link:focus {
   background-color: var(--accent-color);
+  transform: background-color;
 }
 .team-soc-link:hover .team-soc-icon,
 .team-soc-link:focus .team-soc-icon {
   fill: var(--general-wight);
+  transform: fill;
 }
 /* _________________Customers_______________ */
 .customers-container {
@@ -429,6 +443,10 @@ body {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: var(--svg-gray);
+
+  transition-property: fill, border-color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link-text {
 }
@@ -437,6 +455,7 @@ body {
 .customers-list-item:hover {
   border-color: var(--accent-color);
   fill: var(--accent-color);
+  transform: fill;
 }
 /* _________________footer_______________ */
 
@@ -513,6 +532,10 @@ body {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition-property: background-color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-icon {
   fill: var(--general-wight);
@@ -520,10 +543,12 @@ body {
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: var(--accent-color);
+  transform: background-color;
 }
 .footer-soc-link:hover .footer-soc-icon,
 .footer-soc-link:focus .footer-soc-icon {
   fill: var(--general-wight);
+  transform: ;
 }
 
 /*============= Portfolio =============*/
@@ -566,6 +591,10 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  transition-property:  box-shadow, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .example-link img {
   display: block;
@@ -574,6 +603,7 @@ body {
 .example-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: box-shadow;
 }
 
 .example-item {
@@ -626,6 +656,7 @@ body {
   padding-bottom: 6px;
   padding-left: 22px;
   padding-right: 22px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
@@ -634,6 +665,11 @@ body {
   background-color: var(--btn-background);
   border-color: transparent;
   border-radius: 4px;
+
+  transition-property: background-color, color, transform;
+  transition-duration: 2050ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .filters-list .btn-all {
   padding-top: 6px;
@@ -645,6 +681,7 @@ body {
 .btn:focus {
   color: var(--general-wight);
   background-color: var(--accent-color);
+  transform: color, background-color;
 }
 
 .filters-list .btn:hover,
