@@ -22,11 +22,14 @@
                 <a class="link-logo link" href="./index.html" title="Посилання на початкову сторінку"><span
                         class="logo-web">Web</span>Studio</a>
                 <ul class="header-list list">
-                    <li> <a class="link current" href="./index.html" title="Посилання на сторінку: Студія">Студія</a>
+                    <li class="header-list-text">
+                        <a class="link current" href="./index.html" title="Посилання на сторінку: Студія">Студія</a>
                     </li>
-                    <li> <a class="link" href="./portfolio.html" title="Посилання на сторінку: Портфоліо">Портфоліо</a>
+                    <li class="header-list-text">
+                        <a class="link" href="./portfolio.html" title="Посилання на сторінку: Портфоліо">Портфоліо</a>
                     </li>
-                    <li> <a class="link" href="#" title="Посилання на сторінку: Контакти">Контакти</a> </li>
+                    <li class="header-list-text"> <a class="link" href="#"
+                            title="Посилання на сторінку: Контакти">Контакти</a> </li>
                 </ul>
             </nav>
             <ul class="header-contact list">
@@ -56,7 +59,16 @@
         <section class="hero hero-background">
             <div class="hero-container container">
                 <h1 class="hero-title">Ефектні рішення для <br> вашого бізнесу</h1>
-                <button class="btn" type="button">Замовити послугу</button>
+                <button class="btn" type="button" data-modal-open>Замовити послугу</button>
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                        <button type="button" class="button-modal-close" data-modal-close>
+                            <svg class="button-modal-svg" width="14" height="14">
+                                <use href="./images/icons.svg#icon-close"> </use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Our rules for success-->
@@ -91,9 +103,18 @@
             <div class="development-container container">
                 <h2 class="development-title">Чим ми займаємося</h2>
                 <ul class="development-list list">
-                    <li><img width="370" height="260" src="./images/box-1.jpg" alt="Розробка сайту"></li>
-                    <li><img width="370" height="260" src="./images/box-2.jpg" alt="Дизайн сайту"></li>
-                    <li><img width="370" height="260" src="./images/box-3.jpg" alt="Оформлення сайту"></li>
+                    <li class="development-list-text">
+                        <img width="370" height="260" src="./images/box-1.jpg" alt="Розробка сайту">
+                        <h3 class="development-list-title">Десктопні додатки</h3>
+                    </li>
+                    <li class="development-list-text">
+                        <img width="370" height="260" src="./images/box-2.jpg" alt="Дизайн сайту">
+                        <h3 class="development-list-title">Мобільні додатки</h3>
+                    </li>
+                    <li class="development-list-text">
+                        <img width="370" height="260" src="./images/box-3.jpg" alt="Оформлення сайту">
+                        <h3 class="development-list-title">Дизайнерські рішення</h3>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -365,6 +386,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
